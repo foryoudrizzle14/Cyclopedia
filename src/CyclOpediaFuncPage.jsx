@@ -124,10 +124,12 @@ const CyclOPediaFuncPage = () => {
     <div>
       <div className="p-3">
         <span className="h4 text-success">Instructor &nbsp;</span>
-        <i
+        <button
           className={` bi ${state.hideInstructor ? "bi-toggle-off" : "bi-toggle-on"} btn btn-success btn-sm`}
           onClick={handletoggleInstructor}
-        ></i>
+        >
+          hide
+        </button>
         {!state.hideInstructor && state.instructor ? <Instructor instructor={state.instructor} /> : null}
       </div>
       <div className="p-3">Total Render : {totalRender.current}</div>
